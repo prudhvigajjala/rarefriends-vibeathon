@@ -71,3 +71,7 @@ The generated static preview is in `.friendsdk/` and can be published on GitHub 
 - State the SDK version and exact economy rules above.
 - Label the economy as simulated.
 - Explain any future RF-backed/on-chain version separately; this prototype does not deploy contracts.
+
+## Playable preview
+
+https://mellow-caramel-02eadf.netlify.app

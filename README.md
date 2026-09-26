@@ -36,7 +36,7 @@ Node.js 22+ is required.
 ```bash
 npm ci
 npm run build
-npm run dev:game -- games/rare-friends-gacha
+npm run dev:game --
 ```
 
 Then open the displayed local URL, normally `http://localhost:4173`.
@@ -44,7 +44,7 @@ Then open the displayed local URL, normally `http://localhost:4173`.
 For phone testing on the same Wi-Fi network:
 
 ```bash
-npm run dev:game -- games/rare-friends-gacha --host 0.0.0.0 --port 4173
+npm run dev:game -- --host 0.0.0.0 --port 4173
 ```
 
 Open `http://YOUR-COMPUTER-LAN-IP:4173` on the phone. The phone browser must have access to the wallet/runtime requirements described by FriendSDK.
@@ -52,17 +52,17 @@ Open `http://YOUR-COMPUTER-LAN-IP:4173` on the phone. The phone browser must hav
 ## Validation
 
 ```bash
-npx friendsdk check games/rare-friends-gacha
-npx friendsdk test games/rare-friends-gacha --screenshot ./artifacts/gacha.png --width 360
+npx friendsdk check .
+npx friendsdk test . --screenshot ./artifacts/gacha.png --width 360
 ```
 
 ## Preview build
 
 ```bash
-npx friendsdk build games/rare-friends-gacha
+npx friendsdk build .
 ```
 
-The generated static preview is in `games/rare-friends-gacha/.friendsdk/` and can be published on GitHub Pages for the Vibeathon submission.
+The generated static preview is in `.friendsdk/` and can be published on GitHub Pages for the Vibeathon submission.
 
 ## Submission notes
 

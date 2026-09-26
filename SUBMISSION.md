@@ -36,4 +36,4 @@ A production version could attach cosmetic or collection utility to Rare Friends
 
 ## Public preview
 
-`TODO: add GitHub Pages preview URL after local validation`
+

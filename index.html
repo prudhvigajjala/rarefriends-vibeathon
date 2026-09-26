@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rare Friends Gacha</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #1a1a2e;
+      color: #fff;
+      text-align: center;
+      padding: 40px;
+    }
+    h1 { color: #e94560; }
+    button {
+      background: #e94560;
+      color: #fff;
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    button:hover { background: #c73650; }
+    #result {
+      margin-top: 30px;
+      font-size: 24px;
+      min-height: 40px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Rare Friends Gacha</h1>
+  <p>Pull the lever and see what you get!</p>
+  <button onclick="pullGacha()">Pull Gacha</button>
+  <div id="result"></div>
+
+  <script>
+    const characters = [
+      { name: "Common Fish", rarity: "Common", chance: 50 },
+      { name: "Rare Fish", rarity: "Rare", chance: 30 },
+      { name: "Epic Fish", rarity: "Epic", chance: 15 },
+      { name: "Legendary Fish", rarity: "Legendary", chance: 5 }
+    ];
+
+    function pullGacha() {
+      const roll = Math.random() * 100;
+      let cumulative = 0;
+      for (const char of characters) {
+        cumulative += char.chance;
+        if (roll <= cumulative) {
+          document.getElementById("result").innerHTML =
+            "You got: " + char.name + " (" + char.rarity + ")!";
+          return;
+        }
+      }
+    }
+  </script>
+</body>
+</html>
